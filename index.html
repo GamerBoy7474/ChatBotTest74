@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel Good Advice — Custom GPT Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="emoji">🎬</span>
+      <div>
+        <p class="eyebrow">Reel Good Advice</p>
+        <h1>AI Pitch Room</h1>
+      </div>
+    </div>
+    <button id="themeToggle" class="ghost-btn" aria-pressed="false">Toggle theme</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Custom GPT Spotlight</p>
+        <h2>Get cinematic advice tailored to your next project.</h2>
+        <p>
+          This single-page experience embeds your custom GPT —
+          <strong>Reel Good Advice</strong> — so you can ideate, refine, and iterate on
+          concepts without juggling tabs.
+        </p>
+        <div class="cta-group">
+          <a class="primary-btn" href="#assistant" aria-label="Jump to the embedded GPT">
+            Chat below
+          </a>
+          <a class="ghost-btn" href="https://chatgpt.com/g/g-691a494a5220819189f50ee6ffa61746-reel-good-advice" target="_blank" rel="noopener">
+            Open in new tab ↗
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Why this portal?</h3>
+        <ul>
+          <li>Unified workspace for prompts, briefs, and revisions.</li>
+          <li>Responsive layout optimised for laptops, tablets, and phones.</li>
+          <li>Graceful fallback if the embed needs to be opened directly.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="How to get the best results">
+      <article>
+        <p class="eyebrow">Step 1</p>
+        <h3>Set the scene</h3>
+        <p>Describe the genre, tone, target platform, and any references you love.</p>
+      </article>
+      <article>
+        <p class="eyebrow">Step 2</p>
+        <h3>Ask for options</h3>
+        <p>Request multiple takes on a logline, beat sheet, or script doctoring notes.</p>
+      </article>
+      <article>
+        <p class="eyebrow">Step 3</p>
+        <h3>Lock the pitch</h3>
+        <p>Use the follow-up prompts to nail your deck, budget, or production roadmap.</p>
+      </article>
+    </section>
+
+    <section id="assistant" class="assistant">
+      <header>
+        <div>
+          <p class="eyebrow">Live GPT Embed</p>
+          <h2>Chat with Reel Good Advice</h2>
+        </div>
+        <button id="openExternal" class="ghost-btn">Open externally</button>
+      </header>
+      <div class="iframe-wrap" role="group" aria-label="Embedded GPT session">
+        <iframe
+          title="Reel Good Advice GPT"
+          src="https://chatgpt.com/g/g-691a494a5220819189f50ee6ffa61746-reel-good-advice"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          allow="clipboard-write; microphone; camera"
+        ></iframe>
+        <div class="iframe-fallback" aria-hidden="true">
+          <p>Having trouble loading the assistant?</p>
+          <button id="retry" class="primary-btn">Retry loading</button>
+        </div>
+      </div>
+      <p class="notice">
+        Some networks block embedded views of ChatGPT. If the chat does not load, use the
+        “Open externally” button or the fallback link above.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for storytellers. © <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
